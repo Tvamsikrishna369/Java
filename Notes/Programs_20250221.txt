@@ -1,0 +1,77 @@
+1. WAP that accepts 2 integers and a target. Validate if the sum of two numbers is equal to given target. 
+
+2. WAP to convert the given height in inches to centimeters.
+Hint: 1 inch = 2.54 cm.
+
+3. WAP to convert the given height in feet and inches to centimeters.
+Hint: 1 foot = 12 inches
+
+4. WAP that accepts time in seconds. Then it should print the time in "XXh YYm ZZs" format.
+Hint: 1 hour = 60 minutes = 3600 seconds
+
+5. WAP that accepts time in minutes and seconds. Then it should also print the time in "XXh YYm ZZs" format.
+Validations:
+1. The value for seconds and minutes must be > = 0 and <= 59. 
+2. Handle invalid data entry with appropriate messages.
+
+6. WAP that accepts a number and prints the given number in word form.
+
+7. WAP that accepts a number as year, between 1 and 9999 inclusive. If the number is not in range, print appropriate error message. If in range, calculate and print whether the given year is a leap year or not.
+Hint: A year is leap year if it is divisible by 4 and 400 but not by 100.
+
+8. WAP that accepts two numbers month and year. Both month must be between 1 and 12 inclusive and year value must be between 1 and 9999 inclusive. Print the number of days in given month.
+Validation: If the given year is leap year and month as 2, then it must display 29 days, if not must print 28 days for month 2.
+
+9. WAP that accepts a number between 1 and 1000 inclusive. In the range find whether the number is prime or not, along with total number of factors found for each number. At the end print the total number of prime numbers found.
+Hint: Use appropriate messages for invalid input. Use proper data types and looping construct.
+
+10. WAP that loops between 1 and 1000 inclusive. Accept 2 numbers and print out the numbers that are divisible by given 2 numbers. Once after finding 5 numbers, come out of the loop and print the sum of all the 3 numbers.
+
+11. WAP that prints the magic number of given number.
+
+12. WAP that accepts an integer and checks if the given number is palindrome or not. The program must accept positive numbers only.
+
+13. WAP that accepts a range between 1 and 1000 and prints all the palindromes in the range.
+
+14. WAP that accepts an integer between 10 and 99 inclusive. Valid message must be printed if any one or both values are not in the range. The program must
+print the digit that appears in both numbers. For example: if 12 and 51 are given, then it should print 1. since 1 is available in both the numbers.
+
+15. WAP that accepts a number between 1 and 1000 inclusive. If the given number is not in range or a negative number, print appropriate fail message.
+Convert each digit in the given number as word.
+Ex: 1234 is given then it should print "One Two Three Four"
+100 is given then it should print "One Zero Zero"
+
+Additional: Enhance the above program to print the given number with place values. 
+Ex: 1234 is given then it should print "One Thousand Two Hundred and Thirty Four"
+100 is given it should print "One Hundred"
+
+16. WAP that accepts 3 integers (only positive). The 1st is count of big bags (5 kilos each), the 2nd is count of small bags (1 kilo each) and 3rd is the kilos of material provided. The program must print the number of bags count that can be packed with the given flour and count of bags, if left.
+Ex: 1, 0, 5 => Big bags 1 can be packed from given 5 Kilos material
+0, 5, 4 => Small bags 4 can be packed, Small bags 1 cannot be packed from given 4 Kilos material
+2, 2, 11 => Big bags 2 can be packed, Small bags 1 can be packed, Small bags 1 cannot be packed from given 11 Kilos material.
+2, 2, 5 => Big bags 1 can be packed, Big bags 1 cannot be packed, Small bags 2 cannot be packed from given 5 Kilos material.
+
+17. WAP that accepts number of elements (positive integer) and generates array with size of given number and fills all values with random numbers within 100.
+Hint: Use Random random = new Random();
+randomNum = random.nextInt(100);
+
+18. WAP that accepts 2 positive integers between 1 to 1000 inclusive. The program should calculate and print the number if it is perfect number.
+Hint: A perfect number is a positive integer which is equal to the sum of its proper positive divisors. 
+Proper positive divisors are positive integers that fully divide the perfect number without leaving a remainder and exclude the perfect number itself.
+For example, take the number 6: 
+Its proper divisors are 1, 2, and 3 (since 6 is the value of the perfect number, it is excluded), and the sum of its proper divisors is 1 + 2 + 3 = 6. 
+Therefore, 6 is a perfect number (as well as the first perfect number).
+
+19. WAP that accepts a string and checks if the given string is palindrome or not.
+
+20. WAP that accepts a string and counts total vowels and consonants in the given string.
+
+21. WAP that accepts a string and finds all the duplicate characters in the given string.
+
+22. WAP that accepts two strings and prints the string in Upper case, Lower case and Camel case without spaces without using the built-in methods.
+
+23. WAP that accepts two strings and checks whether the second string exists in the first string.
+
+24. WAP that accepts a string and generates new string with alternative characters in Upper and Lower case.
+
+25. WAP that accepts a string and calculates total number of symbols in the given string.

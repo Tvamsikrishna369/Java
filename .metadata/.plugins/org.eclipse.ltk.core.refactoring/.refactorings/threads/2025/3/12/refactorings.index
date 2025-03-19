@@ -1,0 +1,3 @@
+1742263187660	Extract local variable 'curThread'
+1742264088314	Extract local variable 'threadGroup'
+1742349648985	Extract local variable 'listFiles'

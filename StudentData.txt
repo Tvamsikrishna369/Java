@@ -1,0 +1,2 @@
+Ravi,1,social
+Krishna, 2, java

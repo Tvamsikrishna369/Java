@@ -1,0 +1,17 @@
+package com.krishna.stream;
+
+//import java.sql.Array;
+import java.util.List;
+
+public class GroupOwelConsnt {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<String> string = Arrays.asList("vamsi", "krishna", "kumar", "hari");
+		
+		
+		
+	}
+
+}

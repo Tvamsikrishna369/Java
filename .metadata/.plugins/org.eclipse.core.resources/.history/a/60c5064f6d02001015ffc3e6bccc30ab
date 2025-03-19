@@ -1,0 +1,21 @@
+package com.krishna.stream;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class PrimeNotPrime {
+
+	public static void main(String[] args) {
+		
+		List<Integer> num = Arrays.asList(2, 5, 50, 49, 24, 25, 63, 634, 34);
+		
+		Map<String, List<Integer>> prime = num.stream()
+		.collect(Collectors.groupingBy(no -> no/1 == 0 && no/no ==0  ? "Prime" : "Not Prime"));
+		
+		System.out.println(prime);
+		
+	}
+
+}

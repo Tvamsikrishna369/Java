@@ -1,0 +1,76 @@
+package com.krishna.readfiles;
+
+import java.io.File;
+
+public class ReadFiles {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		FileReader filereader = null;
+//		try {
+//			filereader = new FileReader("java");
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BufferedReader reader = new BufferedReader(filereader);
+//		
+//		System.out.println(reader);
+		
+		
+//		File folder = new File("/Java);
+//		File[] fileoffoler = folder.listFiles();
+//		
+//		for (File file: fileoffoler) {
+//			if(file.isFile()) {
+//				System.out.println(file.getName())
+//			}
+//		}
+		
+//		String path = "D:\\Java";
+//		File rootPath = new File(path);
+//		String[] fileList = rootPath.list();
+//		for(String filename : fileList) {
+//			File file = new File(filename);
+//			System.out.println(file.getName());
+//		} 
+		
+		
+		String path = "D:\\Java";
+		File rootPath = new File(path);
+		String[] filesList = rootPath.list();
+		File[] listFiles = rootPath.listFiles();
+		for(File file : listFiles) {
+//			File file = new File(filename);
+			if(file.isDirectory()) {
+				File[] subfilesList = getFilesList(file.getPath());
+				for(File sfile: subfilesList) {					
+					System.out.println(sfile.getName() + " is " + (sfile.isDirectory() ? "Directory : " : "file : "));
+				}
+			} else {
+				System.out.println("file: " + file.getName());
+			}
+		} 		
+		
+//		public static File[] getFilesList(String path) {
+//			File file = new File(path);
+//			if(file.isDirectory()) {
+//				return file.listFiles();
+//			}
+//			return null;
+//		}
+		
+		
+	}
+
+	private static File[] getFilesList(String path) {
+		// TODO Auto-generated method stub
+		File file = new File(path);
+		if(file.isDirectory()) {
+			return file.listFiles();
+		}
+		return null;
+	}
+
+	
+}
