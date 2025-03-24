@@ -1,0 +1,11 @@
+package com.krishna.threads.sync.bank;
+
+public class MainDemo {
+
+	public static void main(String[] args) {
+
+		BankAccount sbiAccount = new BankAccount(100);
+		System.out.println(sbiAccount.getBalance());
+	}
+
+}

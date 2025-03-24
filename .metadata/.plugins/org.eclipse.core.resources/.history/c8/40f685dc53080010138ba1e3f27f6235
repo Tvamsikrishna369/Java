@@ -1,0 +1,14 @@
+package com.krishna.threads.sync;
+
+public class Counter{
+	int count = 0;
+	public void increment() {
+		count++;
+	}
+	
+	public int getCounter() {
+		return count;
+	}
+	
+
+}

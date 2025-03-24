@@ -1,0 +1,25 @@
+//23/03/2025
+
+package com.krishna.threads.sync.bank;
+
+public class BankAccount {
+
+	private int balance;
+	
+	public BankAccount(int balance) {
+		this.balance = balance;
+	}
+	public void withDraw(int amount) {
+		String tname = Thread.currentThread().getName();
+		System.out.println(tname + "Startedwithdaraw");
+		if(balance >= amount) {
+			balance-=amount;
+		}else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+	public int getBalance() {
+		return balance;
+	}
+
+}
