@@ -1,38 +1,85 @@
 package com.krishna.threads.sync.bank;
 
-class MyThread implements Runnable{
+//import java.util.Scanner;
 
-	@Override
-	public void run() {
-		
-	}
-	
-}
+//class MyThread implements Runnable{
+//
+////	Scanner amount = new Scanner(System.in);
+//	
+//	BankAccount bankaccount;
+//	int amount;
+//	
+//	public MyThread(BankAccount bank, int amount) {
+//		this.bankaccount = bank;
+//		this.amount = amount;
+//	}
+//	
+//	@Override
+//	public void run() {
+//		bankaccount.withDraw(amount);
+//		
+//	}
+//	
+//}
 
 public class MainDemo {
 
 	public static void main(String[] args) {
 
 		BankAccount sbiAccount = new BankAccount(100);
+//		MyThread withDrawTask = new MyThread(sbiAccount, 0);
 
-//------------------------Direct Runnable - start----------------------------------
+//------------------------Direct Runnable Withdraw - start----------------------------------
 		Runnable withDrawTask = new Runnable() {			
+//			Scanner input = new Scanner(System.in);
+			
 			@Override
 			public void run() {
-				sbiAccount.withDraw(50);
+//				System.out.println("Enter withdraw Amount : ");
+//				int val = input.nextInt();
+						sbiAccount.withDraw();
 			}
 		};
-//------------------------Direct Runnable - End----------------------------------		
+//------------------------Direct Runnable Withdraw - End----------------------------------		
+		
+//------------------------Direct Runnable Deposit - start----------------------------------
+		Runnable depositTask = new Runnable() {			
+			@Override
+			public void run() {
+				sbiAccount.diposit(500);
+			}
+		};
+//------------------------Direct Runnable Deposit - End----------------------------------				
+		
 		
 		System.out.println("Initial Balance : "+sbiAccount.getBalance());
 //		sbiAccount.withDraw(10);
+		
+		Thread t2 = new Thread(depositTask);
+		t2.start();
+		try {
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+//		
 		Thread t1 = new Thread(withDrawTask);
 		t1.start();
 		try {
 			t1.join();
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println("Final Balance : "+sbiAccount.getBalance());
 	}
 

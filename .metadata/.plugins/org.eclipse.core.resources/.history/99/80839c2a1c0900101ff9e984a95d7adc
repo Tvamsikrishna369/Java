@@ -1,0 +1,40 @@
+package com.krishna.threads.sync.bank;
+
+class MyThread implements Runnable{
+
+	@Override
+	public void run() {
+		
+	}
+	
+}
+
+public class MainDemo {
+
+	public static void main(String[] args) {
+
+		BankAccount sbiAccount = new BankAccount(100);
+
+//------------------------Direct Runnable - start----------------------------------
+		Runnable withDrawTask = new Runnable() {			
+			@Override
+			public void run() {
+				sbiAccount.withDraw(500);
+			}
+		};
+//------------------------Direct Runnable - End----------------------------------		
+		
+		System.out.println("Initial Balance : "+sbiAccount.getBalance());
+//		sbiAccount.withDraw(10);
+		Thread t1 = new Thread(withDrawTask);
+		t1.start();
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("Final Balance : "+sbiAccount.getBalance());
+	}
+
+}

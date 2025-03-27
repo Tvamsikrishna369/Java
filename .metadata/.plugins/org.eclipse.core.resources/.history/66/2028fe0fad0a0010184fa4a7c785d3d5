@@ -1,0 +1,26 @@
+package com.krishna.threads.comm;
+
+class sharedResource{
+	int value;
+}
+
+class producer implements Runnable() {
+
+	private sharedResource resource;
+	
+	public producer
+	
+	public void run() {
+		
+	}
+}
+
+
+public class producerConsumerDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

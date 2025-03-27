@@ -1,2 +1,4 @@
 1742782950724	Extract local variable 'threadName'
 1742783259983	Extract local variable 'tname'
+1742955528761	Extract local variable 'tpool'
+1742957226995	Extract local variable 'amount'

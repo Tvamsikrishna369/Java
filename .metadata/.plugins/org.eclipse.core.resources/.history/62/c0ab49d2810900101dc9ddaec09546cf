@@ -1,0 +1,85 @@
+////24/03/2025
+//
+//package com.krishna.threads.sync.bank;
+//
+//public class BankAccount {
+//
+//	private int balance;
+//	
+//	public BankAccount(int balance) {
+//		this.balance = balance;
+//	}
+//	
+//	public synchronized void withDraw(int amount) {
+//		String tname = Thread.currentThread().getName();
+//		System.out.println(tname + " Startedwithdaraw");
+//		if(balance >= amount) {
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//			balance-=amount;
+//		}else {
+//			System.out.println("Insufficient Balance");
+//		}
+//	}
+//	
+//	public int getBalance() {
+//		return balance;
+//	}
+//
+//}
+
+
+
+//25/03/2025
+// how to use locks/ReentrantLock()
+//
+
+
+package com.krishna.threads.sync.bank;
+
+import java.util.Scanner;
+
+public class BankAccount {
+
+	private int balance;
+	
+	
+	
+	public BankAccount(int balance) {
+		this.balance = balance;
+	}
+	Scanner amount = new Scanner(System.in);
+	
+	public synchronized void withDraw(int amount) {
+		String tname = Thread.currentThread().getName();
+		System.out.println(tname + " Started Withdaraw");
+//		System.out.println("Enter Withdraw Amount : ");
+		if(balance >= amount) {
+			try {
+				Thread.sleep(0);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			balance-=amount;
+			System.out.println("WithDraw Amount: " + amount);
+		}else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+
+	public void diposit(int amount){
+		String tname = Thread.currentThread().getName();
+		System.out.println(tname + " Started Deposite");
+		balance += amount;
+		System.out.println("Deposited Amount: " + amount);
+		
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+
+}

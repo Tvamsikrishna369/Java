@@ -1,0 +1,47 @@
+package com.krishna.threads.pools;
+
+import java.util.Random;
+
+class MyMath{
+	public static int addNumbers(int x, int y) {
+		return x+y;
+	}
+}
+
+class MyAddTask implements Runnable{
+
+	private int fv;
+	private int sv;
+	private int result;
+
+	public MyAddTask(int fv, int sv, int result) {		
+		this.fv = fv;
+		this.sv = sv;
+		this.result  = result;
+	}
+	
+	@Override
+	public void run() {
+		result = MyMath.addNumbers(sv, fv);
+	}
+
+	public int getResult() {
+		return result;
+	}
+	
+}
+
+public class MyAddDemo {
+
+	public static void main(String[] args) {
+
+		Random random = new Random();
+		for (int i=0; i<10 ; i++) {
+			int a = random.nextInt(10);
+			int b = random.nextInt(10);
+			System.out.println("a: " + a + " :: " + "b:  " + b);
+			
+		}
+	}
+
+}

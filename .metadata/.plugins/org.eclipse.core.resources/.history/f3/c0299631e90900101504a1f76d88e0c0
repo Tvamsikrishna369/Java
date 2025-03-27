@@ -1,0 +1,59 @@
+package com.krishna.threads.pools;
+
+import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+class MyMath{
+	public static int addNumbers(int x, int y) {
+		return x+y;
+	}
+}
+
+class MyAddTask implements Runnable{
+
+	private int fv;
+	private int sv;
+	private int result;
+
+	public MyAddTask(int fv, int sv) {		
+		this.fv = fv;
+		this.sv = sv;
+		this.result  = 0;
+	}
+	
+	@Override
+	public void run() {
+		result = MyMath.addNumbers(sv, fv);
+	}
+
+	public int getResult() {
+		return result;
+	}
+	
+}
+
+public class MyAddDemo {
+
+	public static void main(String[] args) {
+
+		ExecutorService tpool = Executors.newFixedThreadPool(3);
+		
+		Random random = new Random();
+		for (int i=0; i<5 ; i++) {
+			int a = random.nextInt(10);
+			int b = random.nextInt(10);
+			MyAddTask task01 = new MyAddTask(0,0);
+			tpool.submit(task01);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Result : " + task01.getResult());
+			System.out.println("a: " + a + " :: " + "b:  " + b);
+		}	
+	}
+
+}
