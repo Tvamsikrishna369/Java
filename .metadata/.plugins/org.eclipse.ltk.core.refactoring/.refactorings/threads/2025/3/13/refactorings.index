@@ -2,3 +2,6 @@
 1742783259983	Extract local variable 'tname'
 1742955528761	Extract local variable 'tpool'
 1742957226995	Extract local variable 'amount'
+1743126706833	Copy package
+1743126712933	Delete element
+1743126724339	Delete element

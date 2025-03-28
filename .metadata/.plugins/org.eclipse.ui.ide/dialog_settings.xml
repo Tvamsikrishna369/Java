@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Java\SaiKiranRepo\SSSO_JFSD_SampleProjects\src"/>
 			<item value="D:\Java\newproject"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
@@ -40,7 +41,7 @@
 		</section>
 	</section>
 	<section name="org.eclipse.text.quicksearch.internal.ui.QuickSearchDialog.DIALOG_SETTINGS">
-		<item key="LAST_QUERY" value="System.in;"/>
+		<item key="LAST_QUERY" value="DriverManager.getConnection(url, userName, password);"/>
 		<item key="PATH_FILTER" value=""/>
 		<item key="CASE_SENSITIVE" value="true"/>
 		<item key="KEEP_OPEN" value="false"/>
