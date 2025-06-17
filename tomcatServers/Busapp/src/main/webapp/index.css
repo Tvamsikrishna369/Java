@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+#header{
+	display: flex;
+	text-shadow: 2px;
+	color: yellow;
+	border: 2px solid black;
+	width: auto;
+	height: 50px;
+	justify-content: space-between;
+}
+img{
+	height: 50px;
+	width: 50px;
+}
+#left{
+	display: flex;
+	left: auto;
+}
+
+#right{
+	display: flex;
+	right: auto;
+}
+
+#login{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	left: 25px;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid brown;
+	width: 300px;
+	height: 150px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#login button{
+/* 
+	display: flex;
+	justify-content: end; */
+}
+
+span{
+	font-size: large;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+#content{
+	padding: 5px;
+	overflow: auto;
+	margin: 5px 0px 5px 0px;
+	height: 1000px;
+	border: 2px solid yellow;
+}
+
+#adds{
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+}
+
+.add{
+	margin: 5px;
+	padding: 2px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid green;
+}
+
+#footer{
+	border: 2px solid black;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 2px;
+}
+

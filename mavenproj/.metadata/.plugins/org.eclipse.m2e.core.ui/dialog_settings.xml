@@ -13,6 +13,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -24,10 +25,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.krishna.api.api1"/>
+			<item value="com.krishna.api.API"/>
 		</list>
 		<list key="groupId">
+			<item value="com.krishna.api"/>
 		</list>
 		<list key="artifactId">
+			<item value="api1"/>
+			<item value="API"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -39,6 +45,7 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0.0.0"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">

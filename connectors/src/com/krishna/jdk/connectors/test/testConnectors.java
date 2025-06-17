@@ -7,17 +7,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public student{
-	private int roll_no;
-	private String name;
+// public student{
+// 	private int roll_no;
+// 	private String name;
 	
 	
-}
+// }
 
 public class testConnectors {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method 
 
 		String url = "jdbc:mysql://localhost:3306/mydb?user=root&password=Krishn@1";
 		
